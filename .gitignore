@@ -61,3 +61,19 @@ buck-out/
 # Expo
 .expo/*
 web-build/
+
+.history
+__tests__
+.expo
+
+style.less
+
+.vscode
+yarn.lock
+package.lock
+
+# src/utils/jsbridge.min.js
+
+style.css
+android/.settings/org.eclipse.buildship.core.prefs
+android/.project
