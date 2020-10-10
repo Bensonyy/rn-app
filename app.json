@@ -5,8 +5,34 @@
     "name": "my-react-app",
     "slug": "my-react-app",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "platforms": ["ios", "android", "web"],
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/icons/icon.png",
+    "splash": {
+      "image": "./assets/icons/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A1A1A"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#000000",
+      "barStyle": "light-content"
+    },
+    "loading": {
+      "icon": "./assets/icons/icon.png",
+      "backgroundColor": "#1A1A1A",
+      "backgroundImage": "./assets/icons/icon.png",
+      "hideExponentText": true
+    },
+    "android": {
+      "package": "io.expo.client"
+    }
   }
 }

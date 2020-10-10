@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
+import './src/utils/errorHandler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Main from './src/index.js';
+import { RootSiblingParent } from 'react-native-root-siblings';
+import * as WeChat from 'react-native-wechat';
+import { wxAppID } from './src/config';
 
-export default function App() {
+WeChat.registerApp(wxAppID);
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <RootSiblingParent>
+      <Main />
+    </RootSiblingParent>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
